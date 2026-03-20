@@ -1,0 +1,42 @@
+@import "tailwindcss" source("./");
+
+@theme {
+  --default-font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  #hero-light1,
+  #hero-light2,
+  #hero-light3 {
+    mix-blend-mode: plus-lighter;
+    mask-mode: luminance;
+    mask-size: max(100vw, 100vh) max(100vw, 100vh);
+    mask-position: center;
+  }
+  #hero-light1 {
+    mask-image: conic-gradient(
+      from 315deg at 32% 24%,
+      var(--hero-light-grad1color) var(--hero-light-grad1deg),
+      var(--hero-light-grad2color) var(--hero-light-grad2deg)
+    );
+  }
+
+  #hero-light2 {
+    mask-image: conic-gradient(
+      from 190deg at 24% 75%,
+      var(--hero-light-grad1color) var(--hero-light-grad1deg),
+      var(--hero-light-grad2color) var(--hero-light-grad2deg)
+    );
+  }
+
+  #hero-light3 {
+    mask-image: conic-gradient(
+      from 110deg at 83% 44%,
+      var(--hero-light-grad1color) var(--hero-light-grad1deg),
+      var(--hero-light-grad2color) var(--hero-light-grad2deg)
+    );
+  }
+  #hero {
+    text-shadow: 0px 2px 4px oklch(13% 0.028 261.692 / 0.5), 0px 4px 4px oklch(13% 0.028 261.692 / 0.4), 0px 6px 16px oklch(13% 0.028 261.692 / 0.3);
+  }
+}
