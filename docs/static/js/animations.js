@@ -22,11 +22,11 @@ function attachPreload(onFinish) {
         console.log(`preload removed from ${el.src}`);
       }
       console.log("All preload completed");
-      // onFinish();
+      onFinish();
       // debug timer:
-      setTimeout(() => {
-        onFinish();
-      }, 200);
+      // setTimeout(() => {
+      //   onFinish();
+      // }, 200);
     }
   };
   if (loadCount > 0) {

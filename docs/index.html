@@ -24,7 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>Document</title>
+    <title>RiiN</title>
 
     <style>
     #loading-screen {
@@ -164,14 +164,57 @@
             <p>Cargando...</p>
         </div>
     </div>
-    <header class="fixed z-50">
-        <div id="header-bar">
-            <!-- <p>HEADER</p> -->
-        </div>
-        <div id="header-menu">
 
+    <header class="fixed z-50 select-none">
+        <div id="header-bar" class="grid grid-cols-3 w-screen h-16 p-4">
+            <div class="h-8">
+                <p class="font-extrabold text-3xl">RiiN</p>
+            </div>
+            <div class="col-span-2 h-8">
+                <div id="header-mobmenu" class=" flex md:hidden flex-col items-end gap-2">
+                    <svg id="mobmenu-btn-open" class="cursor-pointer pointer-events-auto size-8 p-2 scale-200"
+                        onclick="headerToggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" />
+                        <path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+                        <path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" />
+                    </svg>
+                    <svg id="mobmenu-btn-close" class="cursor-pointer pointer-events-auto size-8 p-2 scale-200"
+                        onclick="headerToggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M6.707 5.293l5.293 5.292l5.293 -5.292a1 1 0 0 1 1.414 1.414l-5.292 5.293l5.292 5.293a1 1 0 0 1 -1.414 1.414l-5.293 -5.292l-5.293 5.292a1 1 0 1 1 -1.414 -1.414l5.292 -5.293l-5.292 -5.293a1 1 0 0 1 1.414 -1.414" />
+                    </svg>
+                    <div id="mobmenu-content"
+                        class="flex flex-col items-end p-1 gap-1 text-xl backdrop-blur-sm backdrop-brightness-90 transition-transform rounded-xl">
+                        <div class="py-2 px-4 cursor-pointer">
+                            <a href="">Inicio</a>
+                        </div>
+                        <div class="py-2 px-4 cursor-pointer">
+                            <a href="">Contasto</a>
+                        </div>
+                        <div class="py-2 px-4 cursor-pointer">
+                            <a href="">Ashuda</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex">
+                    <div class="py-2 px-4 cursor-pointer">
+                        <a href="">Inicio</a>
+                    </div>
+                    <div class="py-2 px-4 cursor-pointer">
+                        <a href="">Contasto</a>
+                    </div>
+                    <div class="py-2 px-4 cursor-pointer">
+                        <a href="">Ashuda</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
+
     <div id="hero-background" class="absolute w-screen h-screen -z-50 select-none">
         <img id="hero-base-empty-normal" class="absolute size-full object-cover preload-script z-0"
             src="/static/img/base-empty-normal.png" alt="">
@@ -186,18 +229,25 @@
         <img id="hero-light3" class="absolute size-full object-cover preload-script z-5 hero-light"
             src="/static/img/base-full-light3-difference.png" alt="">
     </div>
-    <section id="hero" class="relative w-screen h-screen px-2 md:px-8 grid grid-rows-[2fr_3fr_2fr_1fr]">
+
+    <section id="hero" class="relative w-screen h-screen px-2 md:px-8 grid grid-rows-[2fr_3fr_2fr_1fr]"
+        style="height: 100svh;">
         <div class="row-start-2 flex flex-col">
             <p id="hero-main-title-over" class="text-xl md:text-3xl">Consultora de</p>
             <h1 id="hero-main-title" class="text-3xl md:text-7xl lg:text-8xl uppercase font-bold"></h1>
         </div>
         <div class="row-start-3 flex flex-col justify-end">
-            <p id="hero-main-paragraph" class="text-xl md:text-3xl max-w-72 md:max-w-md">Hacemos que la tecnología trabaje para vos</p>
+            <p id="hero-main-paragraph" class="text-xl md:text-3xl max-w-72 md:max-w-md">Hacemos que la tecnología
+                trabaje para vos</p>
         </div>
     </section>
-    <div class="h-screen"></div>
+
+    <div class="h-screen">
+
+    </div>
     <div class="h-screen"></div>
     <script src="/static/js/animations.js"></script>
+    <script src="/static/js/header.js"></script>
 
 </body>
 

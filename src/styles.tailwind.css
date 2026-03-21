@@ -2,9 +2,12 @@
 
 @theme {
   --default-font-family: "Poppins", sans-serif;
+  --default-transition-duration: 400ms;
 }
 
 @layer components {
+  /* HERO BACKGROUND */
+
   #hero-light1,
   #hero-light2,
   #hero-light3 {
@@ -39,4 +42,25 @@
   #hero {
     text-shadow: 0px 2px 4px oklch(13% 0.028 261.692 / 0.5), 0px 4px 4px oklch(13% 0.028 261.692 / 0.4), 0px 6px 16px oklch(13% 0.028 261.692 / 0.3);
   }
+
+  /* HEADER MOBILE MENU */
+  #header-mobmenu:not(.menu-visible) {
+    pointer-events: none;
+  }
+  #header-mobmenu.menu-visible #mobmenu-content {
+    transform: translateX(0);
+  }
+  #header-mobmenu:not(.menu-visible) #mobmenu-content {
+    transform: translateX(calc(100% + 5rem));
+  }
+
+  #header-mobmenu.menu-visible #mobmenu-btn-open,
+  #header-mobmenu:not(.menu-visible) #mobmenu-btn-close {
+    display: none;
+  }
+  #header-mobmenu:not(.menu-visible) #mobmenu-btn-open,
+  #header-mobmenu.menu-visible #mobmenu-btn-close {
+    display: block;
+  }
+  
 }
