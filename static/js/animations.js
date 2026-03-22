@@ -81,6 +81,9 @@ function runAnimations() {
     delay: logoFadeDelay,
     duration: logoFadeDuration,
     ease: "power2.out",
+    onComplete: ()=>{
+      document.body.classList.remove("overflow-y-hidden");
+    },
   });
 
   const lightLineDuration = 0.9;
@@ -155,7 +158,7 @@ function runAnimations() {
   const heroMainParag = document.getElementById("hero-main-paragraph");
   const heroTitles = ["modernizacion", "optimizacion", "sistemas"];
   const scrambleDuration = 0.8;
-  const scrambleSeparation = 3;
+  const scrambleSeparation = 1.4;
   gsap.fromTo(
     heroBackground,
     {
@@ -206,17 +209,10 @@ function runAnimations() {
     duration: scrambleDuration,
     delay: mainTextDelay + 0.9,
   });
-
-  // mainTitleTl.fromTo("#hero-main-title", {}, {
-  //   scrambleText: {
-  //     text: "modernizacion",
-  //   },
-  //   ease: "linear",
-  //   duration: 1,
-  // }, 1)
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
+  document.body.classList.add("overflow-y-hidden");
   gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
   attachPreload(runAnimations);
 });
