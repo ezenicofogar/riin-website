@@ -23,10 +23,6 @@ function attachPreload(onFinish) {
       }
       console.log("All preload completed");
       onFinish();
-      // debug timer:
-      // setTimeout(() => {
-      //   onFinish();
-      // }, 200);
     }
   };
   if (loadCount > 0) {
@@ -81,9 +77,6 @@ function runAnimations() {
     delay: logoFadeDelay,
     duration: logoFadeDuration,
     ease: "power2.out",
-    onComplete: ()=>{
-      document.body.classList.remove("overflow-y-hidden");
-    },
   });
 
   const lightLineDuration = 0.9;
@@ -92,10 +85,6 @@ function runAnimations() {
     const light = lights[i];
     let tl = gsap.timeline({
       repeat: -1,
-      // scrollTrigger: {
-      //   trigger: "#hero",
-      //   // markers: true,
-      // },
     });
     tl.fromTo(
       light,

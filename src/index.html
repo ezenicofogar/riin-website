@@ -29,7 +29,7 @@
     {% include 'indexForcedStyles.html' %}
 </head>
 
-<body class="bg-gray-900 text-white relative overflow-y-hidden overflow-x-hidden">
+<body class="bg-gray-900 text-white relative overflow-x-hidden">
     <div id="loading-screen">
         <img id="loading-screen-bg" src="/static/img/base-empty-normal-LQ.png" alt="">
         <div id="loading-screen-cont" class="">
@@ -42,7 +42,7 @@
     <header class="fixed z-50 select-none">
         <div id="header-bar" class="grid grid-cols-3 w-screen h-16 p-4">
             <div class="h-8">
-                <a href="/" class="flex md:hover:opacity-50 transition-opacity">
+                <a href="/#hero" class="flex md:hover:opacity-50 transition-opacity">
                     <svg class="w-8 h-8 mr-1" viewBox="0 0 41 38" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor">
                         <g id="Processed-Iso">
@@ -98,13 +98,13 @@
                     <div id="mobmenu-content"
                         class="flex max-md:flex-col md:items-center max-md:items-end md:h-8 max-md:p-1 gap-1 text-lg max-md:backdrop-blur-sm max-md:backdrop-brightness-90 max-md:transition-transform max-md:rounded-xl">
                         <div class="max-md:py-2 px-4 cursor-pointer md:hover:opacity-50 md:transition-opacity">
-                            <a href="">Inicio</a>
+                            <a href="/#servicios">Servicios</a>
                         </div>
                         <div class="max-md:py-2 px-4 cursor-pointer md:hover:opacity-50 md:transition-opacity">
-                            <a href="">Contasto</a>
+                            <a href="/#nosotros">Nosotros</a>
                         </div>
                         <div class="max-md:py-2 px-4 cursor-pointer md:hover:opacity-50 md:transition-opacity">
-                            <a href="">Ashuda</a>
+                            <a href="/#contacto">Contacto</a>
                         </div>
                     </div>
                 </div>
@@ -134,63 +134,82 @@
                 <h1 id="hero-main-title" class="text-3xl md:text-7xl lg:text-8xl uppercase font-bold"></h1>
             </div>
             <div class="row-start-3 flex flex-col justify-end">
-                <p id="hero-main-paragraph" class="text-xl md:text-3xl max-w-72 md:max-w-md">Hacemos que la tecnología
-                    trabaje para vos</p>
+                <p id="hero-main-paragraph" class="text-xl md:text-3xl max-w-72 md:max-w-md">
+                    Tecnología aplicada a tu realidad
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="">
-        <h2 class="absolute font-light text-xl m-4 text-gray-400">#nosotros</h2>
+    <section id="servicios">
+        <h2 class="absolute font-light text-xl m-4 text-gray-400">#servicios</h2>
         <div class="absolute w-screen h-16 opacity-20" style="background-image: linear-gradient(black, transparent);">
         </div>
         <div class="pt-32 px-4 md:px-8 mx-auto max-w-7xl">
             <p class="text-center md:px-12 text-3xl md:text-5xl mb-12">
-                Lorem ipsum dolor
-                <span class="underline decoration-5 decoration-riin-600 font-semibold">sit amet</span>.
+                Consultá con nuestros
+                <span class="underline decoration-5 decoration-riin-600 font-semibold">profesionales</span>.
             </p>
         </div>
         <div
-            class="px-4 md:px-8 grid grid-cols-1 grid-rows-[26rem_26rem_26rem] sm:grid-cols-2 sm:grid-rows-[26rem_26rem] lg:grid-cols-3 lg:grid-rows-[26rem] gap-8">
+            class="px-4 md:px-8 grid grid-cols-1 grid-rows-[32rem_32rem_32rem] sm:grid-cols-2 sm:grid-rows-[32rem_32rem] lg:grid-cols-3 lg:grid-rows-[32rem] gap-8">
             <a href=""
-                class="sm:max-lg:col-span-2 select-none relative border border-riin-200/10 h-full w-full rounded-2xl overflow-hidden group shadow-lg shadow-gray-950">
+                class="select-none relative h-full w-full rounded-2xl overflow-hidden group shadow-lg shadow-gray-950 sm:max-lg:col-span-2">
                 <div
                     class="-z-10 absolute w-[101%] h-full md:-translate-y-full group-hover:translate-y-0 md:bg-riin-800 md:transition-transform">
-                    <p class="text-2xl font-light text-white/60 p-4">#card1</p>
+                    <p class="text-shadow-md text-xl font-light text-gray-400 p-4"># sitio web</p>
                 </div>
                 <div class="w-full h-full flex flex-col justify-end">
-                    <img src="/static/img/card-image-1.jpg" class="w-full h-full -z-20 flex-1 object-cover object-[50%_20%]" alt="">
+                    <div class="relative w-full grow h-auto -z-20">
+                        <img src="/static/img/card-image-1.jpg"
+                        class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
+                    </div>
                     <div class="flex-none p-4">
-                        <p class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odit
-                            aspernatur rem!</p>
+                        <p class="text-2xl mb-2 font-bold">Presencia Digital</p>
+                        <p class="text-lg">
+                            Diseñamos y desarrollamos sitios web profesionales para empresas que necesitan mejorar su
+                            visibilidad y captar nuevos clientes.
+                        </p>
                     </div>
                 </div>
             </a>
             <a href=""
-                class="select-none relative border border-riin-200/10 h-full w-full rounded-2xl overflow-hidden group shadow-lg shadow-gray-950">
+                class="select-none relative h-full w-full rounded-2xl overflow-hidden group shadow-lg shadow-gray-950">
                 <div
                     class="-z-10 absolute w-[101%] h-full md:-translate-y-full group-hover:translate-y-0 md:bg-riin-800 md:transition-transform">
-                    <p class="text-2xl font-light text-white/60 p-4">#card2</p>
+                    <p class="text-shadow-md text-xl font-light text-gray-400 p-4"> # sistemas </p>
                 </div>
                 <div class="w-full h-full flex flex-col justify-end">
-                    <img src="/static/img/card-image-2.jpg" class="w-full h-full -z-20 flex-1 object-cover object-[50%_20%]" alt="">
+                    <div class="relative w-full grow h-auto -z-20">
+                        <img src="/static/img/card-image-2.jpg"
+                        class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
+                    </div>
                     <div class="flex-none p-4">
-                        <p class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odit
-                            aspernatur rem!</p>
+                        <p class="text-2xl mb-2 font-bold">Gestión Comercial</p>
+                        <p class="text-lg">
+                            Implementamos sistemas de gestión diseñados para organizar la operación diaria de pequeñas y
+                            medianas empresas.
+                        </p>
                     </div>
                 </div>
             </a>
             <a href=""
-                class="select-none relative border border-riin-200/10 h-full w-full rounded-2xl overflow-hidden group shadow-lg shadow-gray-950">
+                class="select-none relative h-full w-full rounded-2xl overflow-hidden group shadow-lg shadow-gray-950">
                 <div
                     class="-z-10 absolute w-[101%] h-full md:-translate-y-full group-hover:translate-y-0 md:bg-riin-800 md:transition-transform">
-                    <p class="text-2xl font-light text-white/60 p-4">#card3</p>
+                    <p class="text-shadow-md text-xl font-light text-gray-400 p-4"> # ayuda </p>
                 </div>
                 <div class="w-full h-full flex flex-col justify-end">
-                    <img src="/static/img/card-image-3.jpg" class="w-full h-full -z-20 flex-1 object-cover object-[50%_20%]" alt="">
+                    <div class="relative w-full grow h-auto -z-20">
+                        <img src="/static/img/card-image-3.jpg"
+                        class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
+                    </div>
                     <div class="flex-none p-4">
-                        <p class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odit
-                            aspernatur rem!</p>
+                        <p class="text-2xl mb-2 font-bold">Consultoría</p>
+                        <p class="text-lg">
+                            Identificamos los problemas de tu negocio y te brindamos soluciones a medida, ajustandonos a
+                            tus procesos y necesidades.
+                        </p>
                     </div>
                 </div>
             </a>
@@ -198,57 +217,71 @@
         <div class="h-24"></div>
     </section>
 
-    <section class="relative">
+    <section id="nosotros" class="relative">
         <h2 class="absolute font-light text-xl m-4 text-gray-400">#nosotros</h2>
-        <img src="/static/img/section-image.jpg" alt=""
-            class="brightness-50 absolute -z-10 w-full h-full object-cover">
-        <div class="h-screen flex flex-col justify-end pb-32 px-4 md:px-8">
-            <p class="mb-12 text-2xl md:text-3xl max-w-5xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur praesentium incidunt ut nihil. Qui
-                officia autem praesentium facere aliquam dolor? Nisi cum facilis quos perferendis.
-            </p>
+        <img src="/static/img/section-image.jpg" alt="" class="brightness-30 absolute -z-10 w-full h-full object-cover">
+        <div class="flex flex-col justify-end pt-32 md:pt-64 pb-32 px-4 md:px-8">
+            <div class="mb-6 md:mb-12 text-xl sm:text-2xl md:text-3xl max-w-5xl">
+                <p>
+                    Ayudamos a PyMEs, profesionales y emprendedores a dar el salto digital.
+                </p>
+                <p class="mt-2">
+                    Entendemos cómo trabajás hoy para diseñar la herramienta que vas a necesitar mañana.
+                </p>
+            </div>
             <p class="text-3xl md:text-5xl max-w-7xl">
-                Lorem ipsum dolor sit amet consectetur
-                <span class="underline decoration-5 decoration-riin-600 font-semibold">adipisicing elit</span>.
-                Modi, rem? Alias!
+                Si tu negocio está creciendo, tus procesos también
+                <span class="underline decoration-5 decoration-riin-600 font-semibold">deben evolucionar</span>.
+
             </p>
             <div class="mt-12 flex">
                 <a href=""
                     class="bg-riin-700 px-8 py-2 rounded-full text-2xl md:text-3xl md:hover:bg-riin-600 transition-colors shadow-lg shadow-riin-900/50">
-                    Button
+                    <span class="hidden md:inline">
+                        Trabajá con nosotros
+                    </span>
+                    <span class="md:hidden inline">
+                        Contactanos
+                    </span>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="">
-        <h2 class="absolute font-light text-xl m-4 text-gray-400">#nosotros</h2>
+    <section id="contacto">
+        <h2 class="absolute font-light text-xl m-4 text-gray-400">#contacto</h2>
         <div class="absolute w-screen h-16 opacity-20" style="background-image: linear-gradient(black, transparent);">
         </div>
         <div class="pt-32 pb-16 px-4 md:px-8 mx-auto max-w-7xl">
             <p class="text-center md:px-12 text-3xl md:text-5xl">
-                Lorem,
-                <span class="underline decoration-5 decoration-riin-600 font-semibold">ipsum dolor sit</span>
-                amet consectetur adipisicing elit. Dolore facere distinctio optio et natus nemo aperiam?
+                Cuando todo es urgente
+                <span class="underline decoration-5 decoration-riin-600 font-semibold">nada</span> es estratégico.
             </p>
             <p class="mt-12 text-center md:px-12 text-2xl md:text-3xl">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sequi perspiciatis eveniet provident?
             </p>
             <div class="mt-12 flex justify-center">
                 <a href=""
-                    class="border-2 border-riin-600 px-8 py-2 rounded-full text-2xl md:text-3xl md:hover:text-riin-400 transition-colors">
-                    Button
+                    class="bg-riin-700 px-8 py-2 rounded-full text-2xl md:text-3xl md:hover:bg-riin-600 transition-colors shadow-lg shadow-riin-900/50">
+                    <span class="hidden md:inline">
+                        BTN Desktop
+                    </span>
+                    <span class="md:hidden inline">
+                        BTN Mobile
+                    </span>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="flex p-4 md:p-8 mb-12 gap-4 max-md:flex-col md:justify-between md:items-end text-gray-400">
+    <footer class="bg-gray-700">
+        <div class="absolute w-screen h-12 opacity-20" style="background-image: linear-gradient(black, transparent);">
+        </div>
+        <div class="flex py-16 px-4 md:px-8 gap-4 max-md:flex-col md:justify-between md:items-end text-gray-400 max-w-6xl mx-auto">
             <div>
-                <svg class="max-h-24 w-full text-riin-300/30" viewBox="0 0 118 38" version="1.1"
+                <svg class="max-h-20 w-full" viewBox="0 0 118 38" version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
-                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-width:0.5px;">
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-width:0.4px;">
                     <g id="Processed-Text-Small">
                         <g id="Riin-Small">
                             <path
@@ -330,14 +363,13 @@
                             style="fill:none;stroke:currentColor;stroke-linecap:butt;" />
                     </g>
                 </svg>
-                <p class="pt-4 text-center md:text-start">
-                    © 2026 RiiN Consultora
+                <p class="pt-4 text-lg text-center md:text-start">
+                    © 2026 <span class="font-extrabold">RiiN</span> Consultora
                 </p>
             </div>
             <div>
-                <p class="text-center md:text-end">Legal 1</p>
-                <a href="" class="block text-center md:text-end underline">Contact 1</a>
-                <a href="" class="block text-center md:text-end underline">Contact 2</a>
+                <p class="text-center md:text-end">RiiN</p>
+                <a href="/" class="block text-center md:text-end underline">Inicio</a>
             </div>
         </div>
     </footer>
