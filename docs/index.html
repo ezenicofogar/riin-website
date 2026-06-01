@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TGVJLJTD');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TGVJLJTD');</script>
     <!-- End Google Tag Manager -->
 
     <!-- tailwind -->
@@ -161,12 +164,30 @@
         opacity: 100%;
     }
 </style>
+
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            animation: marquee var(--marquee-duration, 20s) linear infinite;
+            width: max-content;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-900 text-white relative overflow-x-hidden">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGVJLJTD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGVJLJTD" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
 
@@ -281,6 +302,49 @@
         </div>
     </section>
 
+    <section id="clientes" class="relative">
+        <h2 class="absolute font-light text-xl m-4 text-gray-400">#clientes</h2>
+        <div class="absolute w-screen h-16 opacity-20" style="background-image: linear-gradient(black, transparent);">
+        </div>
+        <div class="pt-32 pb-16 px-4 md:px-8 mx-auto max-w-7xl">
+
+            <!-- Carrusel de logos -->
+            <div class="overflow-hidden relative">
+                <div id="marquee" class="flex space-x-16 opacity-60 hover:opacity-100">
+                    <img src="/static/img/logo-empresas/AbbaShoes-blan.png" alt="AbbaShoes"
+                        class="size-24 object-contain" />
+                    <img src="/static/img/logo-empresas/campos-blan.png" alt="Campos" class="size-24 object-contain" />
+                    <img src="/static/img/logo-empresas/EyC-blan.png" alt="EyC" class="size-24 object-contain" />
+                    <img src="/static/img/logo-empresas/Sanchez-blan.png" alt="Sanchez"
+                        class="size-24 object-contain" />
+                    <img src="/static/img/logo-empresas/sego-Bla.png" alt="Sego" class="size-24 object-contain" />
+                    <img src="/static/img/logo-empresas/ecomaq-blan.png" alt="Sego" class="size-24 object-contain" />
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const marquee = document.getElementById("marquee");
+            const logos = marquee.innerHTML;
+            marquee.innerHTML += logos; // duplicación automática
+            marquee.innerHTML += logos; // duplicación automática
+
+            // calcular duración según ancho
+            const totalWidth = marquee.scrollWidth / 3; // mitad porque duplicamos
+            const speed = 10; // px por segundo
+            const duration = totalWidth / speed;
+
+            marquee.style.setProperty("--marquee-duration", `${duration}s`);
+            marquee.classList.add("animate-marquee");
+        });
+
+
+    </script>
+
     <section id="servicios">
         <h2 class="absolute font-light text-xl m-4 text-gray-400">#servicios</h2>
         <div class="absolute w-screen h-16 opacity-20" style="background-image: linear-gradient(black, transparent);">
@@ -302,7 +366,7 @@
                 <div class="w-full h-full flex flex-col justify-end">
                     <div class="relative w-full grow h-auto -z-20">
                         <img src="/static/img/card-image-1.jpg"
-                        class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
+                            class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
                     </div>
                     <div class="flex-none p-4">
                         <p class="text-2xl mb-2 font-bold">Presencia Digital</p>
@@ -322,7 +386,7 @@
                 <div class="w-full h-full flex flex-col justify-end">
                     <div class="relative w-full grow h-auto -z-20">
                         <img src="/static/img/card-image-2.jpg"
-                        class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
+                            class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
                     </div>
                     <div class="flex-none p-4">
                         <p class="text-2xl mb-2 font-bold">Gestión Comercial</p>
@@ -342,7 +406,7 @@
                 <div class="w-full h-full flex flex-col justify-end">
                     <div class="relative w-full grow h-auto -z-20">
                         <img src="/static/img/card-image-3.jpg"
-                        class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
+                            class="h-full w-full absolute object-cover object-[50%_20%]" alt="">
                     </div>
                     <div class="flex-none p-4">
                         <p class="text-2xl mb-2 font-bold">Consultoría</p>
@@ -359,7 +423,7 @@
 
     <section id="nosotros" class="relative">
         <h2 class="absolute font-light text-xl m-4 text-gray-400">#nosotros</h2>
-        <img src="/static/img/section-image.jpg" alt="" class="brightness-30 absolute -z-10 w-full h-full object-cover">
+        <img src="/static/img/fotocofundadores.png" alt="" class="brightness-30 absolute -z-10 w-full h-full object-cover">
         <div class="flex flex-col justify-end pt-32 md:pt-64 pb-32 px-4 md:px-8">
             <div class="mb-6 md:mb-12 text-xl sm:text-2xl md:text-3xl max-w-5xl">
                 <p>
@@ -416,10 +480,10 @@
     <footer class="bg-gray-700">
         <div class="absolute w-screen h-12 opacity-20" style="background-image: linear-gradient(black, transparent);">
         </div>
-        <div class="flex py-16 px-4 md:px-8 gap-4 max-md:flex-col md:justify-between md:items-end text-gray-400 max-w-6xl mx-auto">
+        <div
+            class="flex py-16 px-4 md:px-8 gap-4 max-md:flex-col md:justify-between md:items-end text-gray-400 max-w-6xl mx-auto">
             <div>
-                <svg class="max-h-20 w-full" viewBox="0 0 118 38" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
+                <svg class="max-h-20 w-full" viewBox="0 0 118 38" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-width:0.4px;">
                     <g id="Processed-Text-Small">
                         <g id="Riin-Small">
@@ -507,28 +571,62 @@
                 </p>
             </div>
             <div>
-                <p class="text-center md:text-end">Enlaces Útiles</p>
+                <p class="text-center md:text-end text-2xl font-bold mb-2">Estamos cerca tuyo</p>
+                <p class="text-center md:text-end text-sm text-gray-400 mb-6">Elegí el canal que prefieras</p>
+
                 <a href="https://wa.me/5493644454650?text=Hola%20RiiN,%20quiero%20saber%20más%20sobre%20sus%20servicios
-" class="block text-center md:text-end underline">
-                    WhatsApp
-                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+                    " class="block text-center md:text-end underline">
+                    +54 9 3644 454650
+                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                        <path
+                            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                    </svg>
                 </a>
                 <a href="ryn.sistemas@gmail.com" class="block text-center md:text-end underline">
-                    Email
-                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /><path d="M3 7l9 6l9 -6" /></svg>
+                    Email: ryn.sistemas@gmail.com
+                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+                        <path d="M3 7l9 6l9 -6" />
+                    </svg>
                 </a>
                 <a href="https://www.instagram.com/riin.info/" class="block text-center md:text-end underline">
-                    Instagram
-                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+                    @riin.info
+                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" />
+                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                        <path d="M16.5 7.5v.01" />
+                    </svg>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61583494834918" class="block text-center md:text-end underline">
-                    Facebook
-                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
-                
+                <a href="https://www.facebook.com/profile.php?id=61583494834918"
+                    class="block text-center md:text-end underline">
+                    RiiN Romina
+                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+
                 </a>
                 <a href="https://www.tiktok.com/@rynsoft?lang=es" class="block text-center md:text-end underline">
-                    Tiktok
-                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917" /></svg>
+                    @rynsoft
+                    <svg class="size-[1em] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917" />
+                    </svg>
                 </a>
             </div>
         </div>
